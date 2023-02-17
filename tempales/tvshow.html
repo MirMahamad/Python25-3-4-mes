@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TvShow</title>
+</head>
+<body>
+
+<div>
+  <button><a href="http://127.0.0.1:8000/admin/">В панель управления</a></button>
+  <ul>
+    {% for i in show %}
+    <li>
+      <h1>Название фильма: {{i.title}}</h1>
+      <p>Жанр: {{i.genre}}</p>
+      <p>Цена: {{i.price}} сом</p>
+      <button><a href="/tvshow/{{i.id}}">Подробнее</a></button>
+    </li>
+
+    {% endfor %}
+  </ul>
+</div>
+
+</body>
+</html>
