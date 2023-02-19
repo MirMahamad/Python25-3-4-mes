@@ -1,0 +1,43 @@
+body{
+    background: url("https://catherineasquithgallery.com/uploads/posts/2021-02/1614405808_30-p-temnii-fon-dlya-slaida-34.jpg");
+}
+
+footer {
+  display: block;
+    text-align: center;
+  padding: 3px;
+  background-color: black;
+  color: wheat;
+}
+
+
+/*hr*/
+ hr {
+    border: none; /* Убираем границу для браузера Firefox */
+    color: black; /* Цвет линии для остальных браузеров */
+    background-color: black; /* Цвет линии для браузера Firefox и Opera */
+    height: 15px; /* Толщина линии */
+   }
+
+
+/*!*уникальный селектор*!*/
+
+/*body{*/
+/*    background-color: blueviolet;*/
+/*    color: black;*/
+/*    font-family: Calibri;*/
+
+/*}*/
+
+/*!*селектор тега*!*/
+/*h1{*/
+
+/*    color: navy;*/
+/*}*/
+
+/*!*селектор класса*!*/
+
+/*.hello{*/
+/*    color: chartreuse;*/
+
+/*}*/

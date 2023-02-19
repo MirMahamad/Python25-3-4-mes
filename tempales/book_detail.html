@@ -1,17 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Book Detail</title>
-</head>
-<body>
+{% include 'header.html' %}
 <center>
-  <h1>Название книги<br>{{book_id.title}}</h1>
-  <p>Описание книги:<br>{{book_id.description}}</p>
-  <img src="{{book_id.image.url}}" alt="" width="400" height="300">
-  <p>Колличество книг:<br>{{book_id.quantity}}</p>
-  <p>Жанр:<br>{{book_id.genre}}</p>
+    <br>
+    <hr>
+    <img src="{{book_id.image.url}}" alt="" width="400" height="300">
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{book_id.title}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{book_id.quantity}}</h6>
+    <p class="card-text">{{book_id.description}}</p>
+    <p class="card-link">{{book_id.description}}</p>
+    <p href="#" class="card-link">{{book_id.genre}}</p>
+  </div>
+</div>
+    <br>
+    <hr>
 </center>
 
-</body>
-</html>
+{% include 'footer.html' %}

@@ -1,17 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Post Detail</title>
-</head>
-<body>
+{% include 'header.html' %}
 <center>
-  <h1>Название поста<br>{{post_id.title}}</h1>
-  <p>Подробное описание поста:<br>{{post_id.description}}</p>
-  <img src="{{post_id.image.url}}" alt="" width="400" height="300">
-  <p>Колличество статей в посте:<br>{{post_id.quantity}}</p>
-  <p>Вид:<br>{{post_id.genre}}</p>
+    <br>
+    <hr>
+    <img src="{{post_id.image.url}}" alt="" width="400" height="300">
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{post_id.title}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{post_id.quantity}}</h6>
+    <p class="card-text">{{post_id.description}}</p>
+    <p class="card-link">{{post_id.description}}</p>
+    <p href="#" class="card-link">{{post_id.genre}}</p>
+  </div>
+</div>
+    <br>
+    <hr>
 </center>
 
-</body>
-</html>
+{% include 'footer.html' %}

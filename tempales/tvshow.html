@@ -1,25 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>TvShow</title>
-</head>
-<body>
-
-<div>
-  <button><a href="http://127.0.0.1:8000/admin/">В панель управления</a></button>
-  <ul>
-    {% for i in show %}
-    <li>
-      <h1>Название фильма: {{i.title}}</h1>
-      <p>Жанр: {{i.genre}}</p>
-      <p>Цена: {{i.price}} сом</p>
-      <button><a href="/tvshow/{{i.id}}">Подробнее</a></button>
-    </li>
-
-    {% endfor %}
-  </ul>
+{% include 'header.html' %}
+<center>
+  {% for i in show %}
+  <br><br>
+  <hr><hr>
+<div class="card" style="width: 18rem;">
+  <img src="{{i.image.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{i.title}}</h5>
+    <p class="card-text">{{i.description}}</p>
+    <a href="/tvshow/{{i.id}}" class="btn btn-primary">Подробнее</a>
+  </div>
 </div>
-
-</body>
-</html>
+  <br><br>
+  {% endfor %}
+</center>
+{% include 'footer.html' %}

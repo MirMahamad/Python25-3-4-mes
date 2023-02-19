@@ -1,21 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>TvShow Detail</title>
-</head>
-<body>
+{% include 'header.html' %}
 <center>
-  <h1>Название фильма<br>{{show_id.title}}</h1>
-  <p>Описание фильма:<br>{{show_id.description}}</p>
-  <img src="{{show_id.image.url}}" alt="" width="400" height="300">
-  <p>Колличество серий:<br>{{show_id.quantity}}</p>
-  <p>Жанр:<br>{{show_id.genre}}</p>
-  <p>Видео:<br>
-    <iframe src="{{show_id.video}}" frameborder="0"></iframe>
-  </p>
-  <p>Цена:<br>{{show_id.price}} сом</p>
+    <br>
+    <hr>
+    <img src="{{show_id.image.url}}" alt="" width="400" height="300">
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{show_id.title}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{show_id.quantity}}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">{{show_id.price}} сом</h6>
+    <p class="card-text">{{show_id.description}}</p>
+    <p class="card-link">{{show_id.description}}</p>
+    <p href="#" class="card-link">{{show_id.genre}}</p>
+  </div>
+</div>
+    <br>
+    <hr>
+    <iframe src="{{show_id.video}}" frameborder="0" width="800" height="640"></iframe>
 </center>
+>
 
-</body>
-</html>
+{% include 'footer.html' %}

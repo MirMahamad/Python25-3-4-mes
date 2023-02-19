@@ -1,22 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Book</title>
-</head>
-<body>
-<div>
-    <ul>
-        {% for i in blog %}
-        <li>
-            <h2>{{i.title}}</h2>
-            <p>{{i.description}}</p>
-            <img src="{{i.image.url}}" alt="" width="600" height="400">
-            <p>{{i.created_date}}</p>
-        </li>
-
-        {% endfor %}
-    </ul>
+{% include 'header.html' %}
+<center>
+  {% for i in show %}
+  <br><br>
+  <hr><hr>
+<div class="card" style="width: 18rem;">
+  <img src="{{i.image.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{i.title}}</h5>
+    <p class="card-text">{{i.description}}</p>
+    <a href="/book/{{i.id}}" class="btn btn-primary">Подробнее</a>
+  </div>
 </div>
-</body>
-</html>
+  <br><br>
+  {% endfor %}
+</center>
+{% include 'footer.html' %}
