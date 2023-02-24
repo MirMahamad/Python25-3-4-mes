@@ -8,7 +8,17 @@
   <div class="card-body">
     <h5 class="card-title">{{i.title}}</h5>
     <p class="card-text">{{i.description}}</p>
-    <a href="/tvshow/{{i.id}}" class="btn btn-primary">Подробнее</a>
+    <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Действия
+  </button>
+  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+    <li><a class="dropdown-item active" href="/tvshow/{{i.id}}">Узнать подробнее о фильме</a></li>
+    <li><a class="dropdown-item" href="/tvshow/{{i.id}}/update">Изменить данные</a></li>
+    <li><a class="dropdown-item" href="/tvshow/{{i.id}}/delete">Удалить фильм</a></li>
+    <li><hr class="dropdown-divider"></li>
+  </ul>
+</div>
   </div>
 </div>
   <br><br>

@@ -9,11 +9,13 @@
     <h6 class="card-subtitle mb-2 text-muted">{{post_id.quantity}}</h6>
     <p class="card-text">{{post_id.description}}</p>
     <p class="card-link">{{post_id.description}}</p>
-    <p href="#" class="card-link">{{post_id.genre}}</p>
+    <p class="card-link">{{post_id.genre}}</p>
+    <div class="btn-group-vertical" role="group" aria-label="Вертикальная группа кнопок">
+    <button type="button" class="btn btn-dark"><a href="/blog/{{post_id.id}}/update" class="text-reset" >Изменить данные</a></button>
+    <button type="button" class="btn btn-dark"><a href="/blog/{{post_id.id}}/delete" class="text-reset">Удалить пост</a></button>
   </div>
 </div>
     <br>
-    <hr>
 </center>
 
 {% include 'footer.html' %}

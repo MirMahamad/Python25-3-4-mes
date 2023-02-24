@@ -7,16 +7,19 @@
   <div class="card-body">
     <h5 class="card-title">{{show_id.title}}</h5>
     <h6 class="card-subtitle mb-2 text-muted">{{show_id.quantity}}</h6>
-      <h6 class="card-subtitle mb-2 text-muted">{{show_id.price}} сом</h6>
+    <h6 class="card-subtitle mb-2 text-muted">{{show_id.price}} сом</h6>
     <p class="card-text">{{show_id.description}}</p>
     <p class="card-link">{{show_id.description}}</p>
     <p href="#" class="card-link">{{show_id.genre}}</p>
+     <div class="btn-group-vertical" role="group" aria-label="Вертикальная группа кнопок">
+   <button type="button" class="btn btn-dark"><a href="/tvshow/{{show_id.id}}/update" class="text-reset">Изменить данные</a></button>
+         <button type="button" class="btn btn-dark"><a href="/tvshow/{{show_id.id}}/delete" class="text-reset">Удалить фильм</a></button>
+</div>
   </div>
 </div>
     <br>
     <hr>
     <iframe src="{{show_id.video}}" frameborder="0" width="800" height="640"></iframe>
 </center>
->
 
 {% include 'footer.html' %}
