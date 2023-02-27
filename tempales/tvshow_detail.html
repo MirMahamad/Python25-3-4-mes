@@ -2,24 +2,39 @@
 <center>
     <br>
     <hr>
-    <img src="{{show_id.image.url}}" alt="" width="400" height="300">
+    <img src="{{object.image.url}}" alt="" width="400" height="300">
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">{{show_id.title}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{show_id.quantity}}</h6>
-    <h6 class="card-subtitle mb-2 text-muted">{{show_id.price}} сом</h6>
-    <p class="card-text">{{show_id.description}}</p>
-    <p class="card-link">{{show_id.description}}</p>
-    <p href="#" class="card-link">{{show_id.genre}}</p>
+    <h5 class="card-title">{{object.title}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{object.quantity}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted">{{object.price}} сом</h6>
+    <p class="card-text">{{object.description}}</p>
+    <p class="card-link">{{object.description}}</p>
+    <p href="#" class="card-link">{{object.genre}}</p>
      <div class="btn-group-vertical" role="group" aria-label="Вертикальная группа кнопок">
-   <button type="button" class="btn btn-dark"><a href="/tvshow/{{show_id.id}}/update" class="text-reset">Изменить данные</a></button>
-         <button type="button" class="btn btn-dark"><a href="/tvshow/{{show_id.id}}/delete" class="text-reset">Удалить фильм</a></button>
+   <button type="button" class="btn btn-dark"><a href="/tvshow/{{object.id}}/update" class="text-reset">Изменить данные</a></button>
+         <button type="button" class="btn btn-dark"><a href="/tvshow/{{object.id}}/delete" class="text-reset">Удалить фильм</a></button>
 </div>
   </div>
 </div>
     <br>
     <hr>
-    <iframe src="{{show_id.video}}" frameborder="0" width="800" height="640"></iframe>
+    <iframe src="{{object.video}}" frameborder="0" width="800" height="640"></iframe>
+
+    <table border="2">
+        <tr>
+            <th style=" color: blue">Дата рейтинга</th><th style="color: brown">Оценка</th>
+
+        </tr>
+        {% for j in object.comment_object.all %}
+        <tr>
+            <td><h3>{j.created_date}</h3></td><td><h3>{j.rate}</h3></td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+
 </center>
 
 {% include 'footer.html' %}

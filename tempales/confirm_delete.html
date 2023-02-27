@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Tv</title>
+</head>
+<body>
+<center>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h2>Вы уверены что хотите удалить этот фильм?</h2>
+    <button type="submit">Да, я уверен</button>
+    <button><a href="/tvshow/" style="text-decoration: none; color: black">Нет, вернуться на главную</a></button>
+  </form>
+</center>
+
+
+</body>
+</html>

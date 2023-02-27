@@ -2,13 +2,13 @@
 <center>
     <br>
     <hr>
-    <img src="{{book_id.image.url}}" alt="" width="400" height="300">
+    <img src="{{object.image.url}}" alt="" width="400" height="300">
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">{{book_id.title}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{book_id.quantity}}</h6>
-    <p class="card-text">{{book_id.description}}</p>
-    <p class="card-link">{{book_id.genre}}</p>
+    <h5 class="card-title">{{object.title}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{object.quantity}}</h6>
+    <p class="card-text">{{object.description}}</p>
+    <p class="card-link">{{object.genre}}</p>
     <div class="btn-group-vertical" role="group" aria-label="Вертикальная группа кнопок">
         <link rel="stylesheet" href="/css/style.css">
             <div class="rating" data-total-value="0">
@@ -20,8 +20,8 @@
 
                 <script src="/js/scripts.js"></script>
     </div>
-    <button type="button" class="btn btn-dark"><a href="/book/{{book_id.id}}/update" class="text-reset" >Изменить данные</a></button>
-    <button type="button" class="btn btn-dark"><a href="/book/{{book_id.id}}/delete" class="text-reset">Удалить пост</a></button>
+    <button type="button" class="btn btn-dark"><a href="/book/{{object.id}}/update" class="text-reset" >Изменить данные</a></button>
+    <button type="button" class="btn btn-dark"><a href="/book/{{object.id}}/delete" class="text-reset">Удалить пост</a></button>
   </div>
 </div>
     <br>

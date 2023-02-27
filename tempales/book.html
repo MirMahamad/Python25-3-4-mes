@@ -1,6 +1,6 @@
 {% include 'header.html' %}
 <center>
-  {% for i in book %}
+  {% for i in object_list %}
   <br><br>
   <hr><hr>
 <div class="card" style="width: 18rem;">
@@ -8,7 +8,7 @@
   <div class="card-body">
     <h5 class="card-title">{{i.title}}</h5>
     <p class="card-text">{{i.description}}</p>
-     <div class="dropdown">
+    <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Действия
   </button>
@@ -21,7 +21,6 @@
 </div>
   </div>
   </div>
-</div>
   <br><br>
   {% endfor %}
 </center>
