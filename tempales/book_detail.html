@@ -10,21 +10,25 @@
     <p class="card-text">{{object.description}}</p>
     <p class="card-link">{{object.genre}}</p>
     <div class="btn-group-vertical" role="group" aria-label="Вертикальная группа кнопок">
-        <link rel="stylesheet" href="/css/style.css">
-            <div class="rating" data-total-value="0">
-        <div class="rating__item" data-item-value="5">★</div>
-        <div class="rating__item" data-item-value="4">★</div>
-        <div class="rating__item" data-item-value="3">★</div>
-        <div class="rating__item" data-item-value="2">★</div>
-        <div class="rating__item" data-item-value="1">★</div>
-
-                <script src="/js/scripts.js"></script>
     </div>
     <button type="button" class="btn btn-dark"><a href="/book/{{object.id}}/update" class="text-reset" >Изменить данные</a></button>
     <button type="button" class="btn btn-dark"><a href="/book/{{object.id}}/delete" class="text-reset">Удалить пост</a></button>
+    <p>Дата публикации: {{object.created_dates}}</p>
+    <p>Дата обновления: {{object.updated_dates}}</p>
   </div>
 </div>
     <br>
+    <div class="p-3 mb-2 bg-info  text-white" style="width: 27rem;">
+    <table border="2">
+        <tr>
+            <td>Рейтинг:</td> <td>Оценка:</td> <td>&nbsp;&nbsp;&nbsp;Комментарий:</td>
+        </tr>
+        {% for j in object.comment_object.all %}
+        <tr>
+            <td>&nbsp;&nbsp;&nbsp;{{j.created_date}}</td> <td>&nbsp;&nbsp;&nbsp; {{j.rate}}</td> <td>&nbsp;&nbsp;&nbsp;{{j.comment}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
 </center>
-
 {% include 'footer.html' %}
