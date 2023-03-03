@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ParserCar</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{form.as_p}}
+  <button type="submit">Начать парсинг</button>
+</form>
+<button><a href="/car-list/">Показать список фильмов</a></button>
+</body>
+</html>
