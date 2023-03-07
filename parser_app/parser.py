@@ -34,7 +34,6 @@ def get_data(html):
             })
         except AttributeError:
             pass
-
     return car_search
 
 @csrf_exempt

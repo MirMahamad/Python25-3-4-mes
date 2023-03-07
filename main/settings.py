@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'book',
     'tv_shows',
     'parser_app',
+    'hw_custom_user',
 ]
 
 MIDDLEWARE = [
